@@ -1,0 +1,9 @@
+<div>
+  <p><button mat-raised-button color="primary" (click)="uploadFile.click()">Choose File</button> or <button mat-raised-button color="primary" (click)="loadDemoSongs()">Load Demo Data</button></p>
+  <input #uploadFile (change)="loadUserSongs($event)" type='file' accept=".json" style="display:none"/>
+</div>
+
+<div *ngIf="neverSelected" class="filler">
+  <p><i>Please Upload a Library</i></p>
+  <p>Not sure what to upload? Get answers on the FAQ page <a mat-raised-button color="primary" routerLink="faq" class="text_spacer">FAQ</a></p>
+</div>
